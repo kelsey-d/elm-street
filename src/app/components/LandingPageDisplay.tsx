@@ -74,7 +74,7 @@ export default function LandingPageDisplay() {
         alt=""
         width={450}
         height={450}
-        className="row-span-2 md:order-0 self-end w-full h-full"
+        className="row-span-2 md:order-0 self-end w-full h-auto"
       />
       <p className="font-condensed font-light italic text-white md:self-end md:order-1">
         {houses[housesIndex].location}

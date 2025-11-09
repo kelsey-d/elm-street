@@ -40,13 +40,16 @@ export default function RootLayout({
       <body
         className={`${sofiaSans.variable} ${sofiaSansExtraCondensed.variable} ${romanesco.variable} antialiased`}
       >
-        <Image
-          src="/misty-forest.jpg"
-          alt=""
-          width={1246}
-          height={531}
-          className="absolute -z-10 h-3/4 w-full object-cover object-left"
-        />
+        <div className="absolute -z-10 h-3/4 w-full">
+          <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-[#00080e] z-10" />
+          <Image
+            src="/misty-forest.jpg"
+            alt=""
+            width={1246}
+            height={531}
+            className="h-full w-full object-cover object-left"
+          />
+        </div>
         <a href="#main-content" className="fixed sr-only focus:not-sr-only">
           Skip to main content
         </a>
