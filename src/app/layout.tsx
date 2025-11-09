@@ -6,6 +6,8 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import Image from "next/image";
+import NavigationMenu from "./components/NavigationMenu";
 
 const sofiaSans = Sofia_Sans({
   variable: "--font-sofia-sans",
@@ -38,28 +40,32 @@ export default function RootLayout({
       <body
         className={`${sofiaSans.variable} ${sofiaSansExtraCondensed.variable} ${romanesco.variable} antialiased`}
       >
-        <header>
-          <nav>
-            <ul className="flex gap-8 items-baseline p-8">
-              <li>
-                <Link
-                  href="/"
-                  className="font-condensed text-[#FF5500] italic text-4xl"
-                >
-                  ElmStreet
-                </Link>
-              </li>
-              {["buy", "rent", "sell"].map((page) => (
-                <li key={page}>
-                  <Link href={`/`} className="font-condensed uppercase text-lg">
-                    {page}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+        <Image
+          src="/misty-forest.jpg"
+          alt=""
+          width={1246}
+          height={531}
+          className="absolute -z-10 h-3/4 w-full object-cover object-left"
+        />
+        <a href="#main-content" className="fixed sr-only focus:not-sr-only">
+          Skip to main content
+        </a>
+        <header className="w-full flex justify-between items-center px-8 pt-8 md:fixed md:gap-4 md:justify-start">
+          <Link
+            href="/"
+            className="font-condensed text-crimson italic text-4xl"
+          >
+            ElmStreet
+          </Link>
+          <NavigationMenu />
         </header>
-        {children}
+        <main
+          id="main-content"
+          tabIndex={0}
+          className="w-full flex-1 flex flex-col"
+        >
+          {children}
+        </main>
       </body>
     </html>
   );

@@ -1,4 +1,4 @@
-const houses = [
+export const houses = [
     {
 
         image: '/starrett-mansion.jpg',

@@ -11,10 +11,10 @@
   --font-sans: var(--font-sofia-sans);
   --font-condensed: var(--font-sofia-sans-extra-condensed);
   --font-decorative: var(--font-romanesco);
-  --text-crimson: #FF5500;
-  --text-ice: #9EBFE3;
+  --color-crimson: #FF5500;
+  --color-ice: #9EBFE3;
+  --color-dusk: "#00080e";
 }
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;

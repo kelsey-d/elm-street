@@ -16,6 +16,7 @@ const config: Config = {
       colors: {
         'crimson': '#FF5500',
         'ice': '#9EBFE3',
+        'dusk': '#00080E',
       },
     },
   },
